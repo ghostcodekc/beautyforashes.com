@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  EmailSenderFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: EmailSenderFunction
+      Handler: send-email.lambda_handler
+      Runtime: python3.8
+      CodeUri: send-email/
+      Environment:
+        Variables:
+          REGION_NAME: 'us-east-1'
+      Policies:
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - ses:SendEmail
+              Resource: '*'
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /send-email
+            Method: POST
+            RestApiId: !Ref APIGW
+  APIGW:
+    Type: AWS::Serverless::Api
+    Properties: 
+      Name: send-email
+      StageName: prod
+      Cors:
+        AllowOrigin: "'*'"
+        AllowHeaders: "'Content-Type, X-Amz-Date, Authorization, X-Api-Key, X-Amz-Security-Token, X-Amz-User-Agent'"
+        AllowMethods: "'OPTIONS, POST, GET, PATCH, PUT'"
+      

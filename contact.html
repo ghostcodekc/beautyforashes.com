@@ -39,7 +39,7 @@
           <div class="px-4 w-60 max-w-full">
             <a href="index.html" class="navbar-logo w-full block py-5">
               <img
-                src="assets/images/logo/logo-white.svg"
+                src="assets/images/logo/bad-logo.png"
                 alt="logo"
                 class="w-full header-logo"
               />
@@ -155,28 +155,7 @@
                     >
                       Pricing
                     </a>
-                  </li>
-                  <li class="relative group">
-                    <a
-                      href="team.html"
-                      class="
-                        ud-menu-scroll
-                        text-base text-dark
-                        lg:text-white
-                        lg:group-hover:opacity-70
-                        lg:group-hover:text-white
-                        group-hover:text-primary
-                        py-2
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex
-                        mx-8
-                        lg:mr-0 lg:ml-7
-                        xl:ml-12
-                      "
-                    >
-                      Team
-                    </a>
-                  </li>
+                  </li> 
                   <li class="relative group">
                     <a
                       href="contact.html"
@@ -216,7 +195,9 @@
         md:pt-[130px]
         lg:pt-[160px]
         pb-[100px]
-        bg-primary
+        bg-gradient-to-b
+      from-primary
+      to-secondary
         overflow-hidden
       "
     >
@@ -353,7 +334,7 @@
                   <div>
                     <h5 class="text-lg font-semibold mb-6">Our Location</h5>
                     <p class="text-base text-body-color">
-                      401 Broadway, 24th Floor, Orchard Cloud View, London
+                      Kansas City, KS
                     </p>
                   </div>
                 </div>
@@ -372,9 +353,9 @@
                   </div>
                   <div>
                     <h5 class="text-lg font-semibold mb-6">How Can We Help?</h5>
-                    <p class="text-base text-body-color">info@yourdomain.com</p>
+                    <p class="text-base text-body-color">jesidanggirl@gmail.com</p>
                     <p class="text-base text-body-color">
-                      contact@yourdomain.com
+                      placeholder@gmail.com
                     </p>
                   </div>
                 </div>
@@ -402,7 +383,7 @@
               <h3 class="font-semibold mb-8 text-2xl md:text-[26px]">
                 Send us a Message
               </h3>
-              <form>
+              <form id="contact_form">
                 <div class="mb-6">
                   <label for="fullName" class="block text-xs text-dark"
                     >Full Name*</label
@@ -410,7 +391,7 @@
                   <input
                     type="text"
                     name="fullName"
-                    placeholder="Adam Gelius"
+                    placeholder="FirstName LastName"
                     class="
                       w-full
                       border-0 border-b border-[#f1f1f1]
@@ -426,7 +407,7 @@
                   <input
                     type="email"
                     name="email"
-                    placeholder="example@yourmail.com"
+                    placeholder="example@gmail.com"
                     class="
                       w-full
                       border-0 border-b border-[#f1f1f1]
@@ -442,7 +423,7 @@
                   <input
                     type="text"
                     name="phone"
-                    placeholder="+885 1254 5211 552"
+                    placeholder="913 111 1111"
                     class="
                       w-full
                       border-0 border-b border-[#f1f1f1]
@@ -470,7 +451,9 @@
                 </div>
                 <div class="mb-0">
                   <button
-                    type="submit"
+                    type="button"
+                    id="submit_button"
+                    onclick="send_email()"
                     class="
                       inline-flex
                       items-center
@@ -479,10 +462,10 @@
                       px-6
                       rounded
                       text-white
-                      bg-primary
+                      bg-black
                       text-base
                       font-medium
-                      hover:bg-dark
+                      hover:bg-secondary
                       transition
                       duration-300
                       ease-in-out
@@ -579,5 +562,6 @@
 
     <!-- ====== All Scripts -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/send_email.js"></script>
   </body>
 </html>

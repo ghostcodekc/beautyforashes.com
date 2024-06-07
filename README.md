@@ -20,3 +20,8 @@ Play is an open-source template, you can use it with your personal or commercial
 ## 💙 Support
 You can always support this project by [Starring🌟 This Repository](https://github.com/tailgrids/play-tailwind) 
 and sharing with friends. Also open an issue if you find bug or feel free to contribute by pull requests after fixing any issue or adding more values.
+
+
+
+## Send E-Mail Deployment
+sam package --template-file template.yaml --output-template-file packaged.yaml --s3-bucket cdk-hnb659fds-assets-172861630355-us-east-1 && sam deploy --template-file packaged.yaml --stack-name SendEmail --capabilities CAPABILITY_IAM
