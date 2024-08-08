@@ -30,11 +30,3 @@ def lambda_handler(event, context):
     phone = body['phone']
     message = body['message']
     send_email(name, email, phone, message)
-
-# Example usage
-# subject = "Hello from AWS Lambda"
-# body = "This is the body of the email."
-# sender = "andrewmgrube@gmail.com"
-# recipient = "recipient_email@example.com"
-
-# send_email(subject, body, sender, recipient)
