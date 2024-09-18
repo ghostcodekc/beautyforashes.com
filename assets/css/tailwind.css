@@ -1133,11 +1133,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(9 14 52 / 0));
 }
 
-.from-black{
-  --tw-gradient-from: #343434;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(52 52 52 / 0));
-}
-
 .to-secondary{
   --tw-gradient-to: #FFC94A;
 }
@@ -1479,12 +1474,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shadow-testimonial{
   --tw-shadow: 0px 60px 120px -20px #EBEFFD;
   --tw-shadow-colored: 0px 60px 120px -20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-pricing{
-  --tw-shadow: 0px 39px 23px -27px rgba(0, 0, 0, 0.04);
-  --tw-shadow-colored: 0px 39px 23px -27px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
