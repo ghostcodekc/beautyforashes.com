@@ -27,8 +27,8 @@ module.exports = {
         black: "#343434",
         dark: "#090E34",
         "dark-700": "#090e34b3",
-        primary: "#DEB3AD",
-        secondary: "#FFC94A",
+        primary: "#1E272C", // #DEB3AD
+        secondary: "#FFFFFF",
         "body-color": "#343434",
         warning: "#FBBF24",
       },

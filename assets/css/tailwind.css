@@ -1037,7 +1037,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-primary{
   --tw-border-opacity: 1;
-  border-color: rgb(222 179 173 / var(--tw-border-opacity));
+  border-color: rgb(30 39 44 / var(--tw-border-opacity));
 }
 
 .border-\[\#D4DEFF\]{
@@ -1069,7 +1069,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-primary{
   --tw-bg-opacity: 1;
-  background-color: rgb(222 179 173 / var(--tw-bg-opacity));
+  background-color: rgb(30 39 44 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#f5f8ff\]{
@@ -1099,7 +1099,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-secondary{
   --tw-bg-opacity: 1;
-  background-color: rgb(255 201 74 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#f3f4ff\]{
@@ -1124,8 +1124,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .from-primary{
-  --tw-gradient-from: #DEB3AD;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(222 179 173 / 0));
+  --tw-gradient-from: #1E272C;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(30 39 44 / 0));
 }
 
 .from-dark-700{
@@ -1134,7 +1134,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .to-secondary{
-  --tw-gradient-to: #FFC94A;
+  --tw-gradient-to: #FFFFFF;
 }
 
 .to-transparent{
@@ -1426,7 +1426,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-primary{
   --tw-text-opacity: 1;
-  color: rgb(222 179 173 / var(--tw-text-opacity));
+  color: rgb(30 39 44 / var(--tw-text-opacity));
 }
 
 .text-body-color{
@@ -1484,7 +1484,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ring-primary{
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(222 179 173 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(30 39 44 / var(--tw-ring-opacity));
 }
 
 .transition{
@@ -1545,7 +1545,7 @@ body {
 
 .sticky #navbarCollapse li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(222 179 173 / var(--tw-text-opacity));
+  color: rgb(30 39 44 / var(--tw-text-opacity));
   opacity: 1;
 }
 
@@ -1555,7 +1555,7 @@ body {
 
 .sticky #navbarCollapse li .ud-menu-scroll.active{
   --tw-text-opacity: 1;
-  color: rgb(222 179 173 / var(--tw-text-opacity));
+  color: rgb(30 39 44 / var(--tw-text-opacity));
   opacity: 1;
 }
 
@@ -1566,13 +1566,13 @@ body {
 
 .sticky .loginBtn:hover{
   --tw-text-opacity: 1;
-  color: rgb(222 179 173 / var(--tw-text-opacity));
+  color: rgb(30 39 44 / var(--tw-text-opacity));
   opacity: 1;
 }
 
 .sticky .signUpBtn{
   --tw-bg-opacity: 1;
-  background-color: rgb(222 179 173 / var(--tw-bg-opacity));
+  background-color: rgb(30 39 44 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1664,12 +1664,12 @@ body {
 
 .hover\:border-primary:hover{
   --tw-border-opacity: 1;
-  border-color: rgb(222 179 173 / var(--tw-border-opacity));
+  border-color: rgb(30 39 44 / var(--tw-border-opacity));
 }
 
 .hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(222 179 173 / var(--tw-bg-opacity));
+  background-color: rgb(30 39 44 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-dark:hover{
@@ -1679,7 +1679,7 @@ body {
 
 .hover\:bg-secondary:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(255 201 74 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-opacity-100:hover{
@@ -1697,7 +1697,7 @@ body {
 
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
-  color: rgb(222 179 173 / var(--tw-text-opacity));
+  color: rgb(30 39 44 / var(--tw-text-opacity));
 }
 
 .hover\:text-dark:hover{
@@ -1732,7 +1732,7 @@ body {
 
 .focus\:border-primary:focus{
   --tw-border-opacity: 1;
-  border-color: rgb(222 179 173 / var(--tw-border-opacity));
+  border-color: rgb(30 39 44 / var(--tw-border-opacity));
 }
 
 .focus\:outline-none:focus{
@@ -1765,7 +1765,7 @@ body {
 
 .group:hover .group-hover\:text-primary{
   --tw-text-opacity: 1;
-  color: rgb(222 179 173 / var(--tw-text-opacity));
+  color: rgb(30 39 44 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:opacity-100{
