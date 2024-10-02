@@ -1963,6 +1963,11 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-black:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 52 52 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-opacity-100:hover{
   --tw-bg-opacity: 1;
 }
