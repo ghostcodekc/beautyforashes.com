@@ -22,6 +22,8 @@ You can always support this project by [Starring🌟 This Repository](https://gi
 and sharing with friends. Also open an issue if you find bug or feel free to contribute by pull requests after fixing any issue or adding more values.
 
 
+## Recomplie the css & watch
+npx tailwindcss -i src/tailwind.css -o assets/css/tailwind.css --watch
 
 ## Send E-Mail Deployment
 sam package --template-file template.yaml --output-template-file packaged.yaml --s3-bucket cdk-hnb659fds-assets-172861630355-us-east-1 && sam deploy --template-file packaged.yaml --stack-name SendEmail --capabilities CAPABILITY_IAM
