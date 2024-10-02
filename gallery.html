@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/tailwind.css" />
 
+    <!-- ==== Gallery JS for gallery==== -->
+    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
     <!-- ==== WOW JS ==== -->
     <script src="assets/js/wow.min.js"></script>
     <script>
@@ -190,7 +194,7 @@
     <!-- ====== Banner Section Start -->
     <div
       class="
-        relative
+        static
         z-10
         pt-[120px]
         md:pt-[130px]
@@ -204,187 +208,128 @@
         <div class="flex flex-wrap items-center -mx-4">
           <div class="w-full px-4">
             <div class="text-center">
-              <h1 class="font-semibold text-white text-4xl">404 Page</h1>
+              <h1 class="font-semibold text-white text-4xl">Gallery</h1>
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <span class="absolute top-0 left-0 z-[-1]">
-          <svg
-            width="495"
-            height="470"
-            viewBox="0 0 495 470"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="55"
-              cy="442"
-              r="138"
-              stroke="white"
-              stroke-opacity="0.04"
-              stroke-width="50"
-            />
-            <circle
-              cx="446"
-              r="39"
-              stroke="white"
-              stroke-opacity="0.04"
-              stroke-width="20"
-            />
-            <path
-              d="M245.406 137.609L233.985 94.9852L276.609 106.406L245.406 137.609Z"
-              stroke="white"
-              stroke-opacity="0.08"
-              stroke-width="12"
-            />
-          </svg>
-        </span>
-        <span class="absolute top-0 right-0 z-[-1]">
-          <svg
-            width="493"
-            height="470"
-            viewBox="0 0 493 470"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="462"
-              cy="5"
-              r="138"
-              stroke="white"
-              stroke-opacity="0.04"
-              stroke-width="50"
-            />
-            <circle
-              cx="49"
-              cy="470"
-              r="39"
-              stroke="white"
-              stroke-opacity="0.04"
-              stroke-width="20"
-            />
-            <path
-              d="M222.393 226.701L272.808 213.192L259.299 263.607L222.393 226.701Z"
-              stroke="white"
-              stroke-opacity="0.06"
-              stroke-width="13"
-            />
-          </svg>
-        </span>
       </div>
     </div>
     <!-- ====== Banner Section End -->
 
-    <!-- ====== 404 Section Start -->
-    <section class="bg-white py-14 lg:py-20">
-      <div class="container">
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full px-4">
-            <div
-              class="
-                max-w-[850px]
-                mx-auto
-                text-center
-                bg-white
-                rounded-lg
-                relative
-                overflow-hidden
-                py-20
-                px-8
-                sm:px-12
-                md:px-[60px]
-                shadow-lg
-                wow
-                fadeInUp
-              "
-              data-wow-delay=".2s"
-            >
-              <h2
-                class="
-                  font-bold
-                  mb-8
-                  text-dark text-3xl
-                  sm:text-4xl
-                  lg:text-[40px]
-                  xl:text-[42px]
-                "
-              >
-                404 - We couldn't find that page.
-              </h2>
-              <h3 class="font-normal mb-8 text-xl md:text-2xl text-dark-700">
-                Maybe you can find what you need here?
-              </h3>
-              <ul class="flex flex-wrap justify-center">
-                <li>
-                  <a
-                    href="index.html"
-                    class="
-                      text-base
-                      font-medium
-                      py-3
-                      px-6
-                      text-dark
-                      rounded-md
-                      mx-2
-                      my-1
-                      inline-block
-                      bg-[#f5f8ff]
-                      hover:bg-black hover:text-white
-                    "
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="about.html"
-                    class="
-                      text-base
-                      font-medium
-                      py-3
-                      px-6
-                      text-dark
-                      rounded-md
-                      mx-2
-                      my-1
-                      inline-block
-                      bg-[#f5f8ff]
-                      hover:bg-black hover:text-white
-                    "
-                  >
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="contact.html"
-                    class="
-                      text-base
-                      font-medium
-                      py-3
-                      px-6
-                      text-dark
-                      rounded-md
-                      mx-2
-                      my-1
-                      inline-block
-                      bg-[#f5f8ff]
-                      hover:bg-baclk hover:text-white
-                    "
-                  >
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <!-- ====== Gallery Section Start -->
+    
+    <div x-data="gallery()" class="grid px-2 pb-4 pt-3 grid-cols-2 md:grid-cols-3 gap-4">
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+            </a>
         </div>
-      </div>
-    </section>
-    <!-- ====== 404 Section End -->
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+            class="block relative w-full h-full"
+            href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+            >
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+        </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a x-on:click.prevent="open" 
+                    class="block relative w-full h-full"
+                    href="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
+                    >
+                    <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+            </a>
+        </div>
+        <div style="display: none" x-show="isOpen()" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:leave="transition ease-in-in duration-300" x-transition:leave-end="opacity-0" x-on:click="close" x-on:keydown.window.escape="close" class="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center">
+            <img x-show="isOpen()"
+                x-transition:enter="transition ease-in-out duration-300"
+                x-transition:enter-start="opacity-0 transform scale-50"
+                x-transition:leave="transition ease-in-in duration-300"
+                x-transition:leave-end="opacity-0 transform scale-50" 
+                class="w-4/5 h-4/5 object-contain object-center" 
+                x-bind:src="activeImageUrl" 
+                alt=""
+            >
+        </div>
+    </div>
 
+    <!-- ====== Gallery Section End -->
+    
     <!-- ====== Footer Section Start -->
 
     <!-- ====== Footer Section End -->
@@ -422,5 +367,6 @@
 
     <!-- ====== All Scripts -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/gallery.js"></script>
   </body>
 </html>
