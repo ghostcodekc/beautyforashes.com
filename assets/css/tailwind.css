@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Sacramento:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1730,7 +1736,11 @@ video {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Cardo", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", serif;
 }
 
 .sticky{
