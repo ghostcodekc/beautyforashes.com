@@ -4,12 +4,31 @@ import { Check, Star, Sparkles, HeartHandshake, Clock, ShieldCheck, ArrowRight }
 export default function Services({ onSelectPackage }) {
   const packages = [
     {
+      id: 'bridal-party',
+      name: 'Bridal Party & Mothers',
+      tagline: 'Customized bespoke glam for attendants & honored family',
+      price: '$175',
+      period: 'per person',
+      isPopular: false,
+      orderClass: 'order-1 lg:order-3',
+      features: [
+        'Bridesmaids, Mothers of Bride & Groom, Family Guests',
+        'On-Location Travel to Your Bridal Getting-Ready Suite',
+        'Skin Consultation Tailored to Skin Tone & Texture',
+        'High-End Luxury Products & High-Def Camera Setting',
+        'Lashes Included with Every Makeup Application',
+        'Timely Schedule Execution keeping you on wedding timeline',
+      ],
+      idealFor: 'Adding extra bridesmaids, grandmothers, or attendants',
+    },
+    {
       id: 'bride-only',
       name: 'The Bride Experience',
       tagline: 'Intimate, focused perfection for the woman of the hour',
       price: '$300',
       period: 'flat rate',
       isPopular: false,
+      orderClass: 'order-2 lg:order-1',
       features: [
         'Custom In-Depth Bridal Consultation',
         'Bridal Trial Session Included in Studio',
@@ -27,6 +46,7 @@ export default function Services({ onSelectPackage }) {
       price: '$1,200',
       period: 'all-inclusive party package',
       isPopular: true,
+      orderClass: 'order-3 lg:order-2',
       features: [
         'Complete Glam for 8: Bride + MOB + MOG + 5 Bridesmaids',
         'Two Dedicated Lead Artists for relaxed, timely flow',
@@ -37,23 +57,6 @@ export default function Services({ onSelectPackage }) {
         'Touch-Up Essentials Kit for Bride on Wedding Day',
       ],
       idealFor: 'Full bridal parties seeking luxury, synchronized pacing',
-    },
-    {
-      id: 'bridal-party',
-      name: 'Bridal Party & Mothers',
-      tagline: 'Customized bespoke glam for attendants & honored family',
-      price: '$175',
-      period: 'per person',
-      isPopular: false,
-      features: [
-        'Bridesmaids, Mothers of Bride & Groom, Family Guests',
-        'On-Location Travel to Your Bridal Getting-Ready Suite',
-        'Skin Consultation Tailored to Skin Tone & Texture',
-        'High-End Luxury Products & High-Def Camera Setting',
-        'Lashes Included with Every Makeup Application',
-        'Timely Schedule Execution keeping you on wedding timeline',
-      ],
-      idealFor: 'Adding extra bridesmaids, grandmothers, or attendants',
     },
   ]
 
@@ -103,7 +106,7 @@ export default function Services({ onSelectPackage }) {
           {packages.map((pkg) => (
             <div
               key={pkg.id}
-              className={`relative rounded-2xl transition-all duration-300 flex flex-col justify-between ${
+              className={`relative rounded-2xl transition-all duration-300 flex flex-col justify-between ${pkg.orderClass} ${
                 pkg.isPopular
                   ? 'bg-[#1E272C] text-white shadow-2xl scale-100 lg:-translate-y-2 border-2 border-[#DEB3AD]'
                   : 'bg-white text-[#343434] shadow-lg hover:shadow-xl border border-[#DEB3AD]/30'
