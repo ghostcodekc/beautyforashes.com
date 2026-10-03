@@ -6,7 +6,7 @@ Resources:
     Properties:
       FunctionName: EmailSenderFunction
       Handler: send-email.lambda_handler
-      Runtime: python3.8
+      Runtime: python3.15
       CodeUri: send-email/
       Environment:
         Variables:
