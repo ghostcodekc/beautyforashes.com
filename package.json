@@ -1,19 +1,23 @@
 {
-  "name": "play-tailwind",
-  "version": "1.0.0",
-  "description": "",
-  "main": "tailwind.config.js",
+  "name": "beautyforashes",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "build-css": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css -w"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uideck/play-tailwind.git"
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^1.50.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
-    "tailwindcss": "^3.4.13"
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.2"
   }
 }
