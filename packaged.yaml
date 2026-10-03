@@ -7,7 +7,7 @@ Resources:
       FunctionName: EmailSenderFunction
       Handler: send-email.lambda_handler
       Runtime: python3.15
-      CodeUri: s3://cdk-hnb659fds-assets-172861630355-us-east-1/f34395e6512af22583e5666f54542d56
+      CodeUri: s3://cdk-hnb659fds-assets-172861630355-us-east-1/3e7fbb7ee37b9742819284a556b74116
       Environment:
         Variables:
           REGION_NAME: us-east-1
